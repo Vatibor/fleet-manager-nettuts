@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BaseService } from '../../service/base.service';
 
 @Component({
   selector: 'app-data-table',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-table.component.css']
 })
 export class DataTableComponent implements OnInit {
+
+  deleteIconClass: string = 'fa fa-trash-o';
 
   cols: {key: string, text: string}[] = [
     {key: 'id', text: '#'},
@@ -16,19 +19,9 @@ export class DataTableComponent implements OnInit {
     {key: 'address', text: 'Address'},
 
   ]
+  driver: any = [];
 
-  driver: any = {
-    id: 1,
-    name: "John Doe",
-    email: "john.doe@gmail.com",
-    phone: "+203456987",
-    city: "LA",
-    address: "Apple srt. 43",
-  }
-
-  deleteIconClass: string = 'fa fa-trash-o';
-
-  constructor() {
+  constructor(private baseService: BaseService) {
 
     setInterval( () => {
       this.deleteIconClass = this.deleteIconClass == 'fa fa-trash-o' ? 'fa fa-trash' : 'fa fa-trash-o';
@@ -37,6 +30,7 @@ export class DataTableComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.driver = this.baseService.getAll('drivers')[0];
   }
 
   onUpdate($event): void{
