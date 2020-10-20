@@ -11,6 +11,8 @@ One way data binding -> transfer from components to html
 Event binding -> from html to components
 Property binding -> attribute transfer to html
 
+Two way data binding -> component <-> html
+
 # FleetManager
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
