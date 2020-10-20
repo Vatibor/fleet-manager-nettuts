@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-data-cell',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-cell.component.css']
 })
 export class DataCellComponent implements OnInit {
-  cellValue: string = "33 avn. 11.";
+  @Input() cellValue;
+
   constructor() { }
 
   ngOnInit(): void {

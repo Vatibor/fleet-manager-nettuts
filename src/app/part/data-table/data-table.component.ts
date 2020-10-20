@@ -17,6 +17,15 @@ export class DataTableComponent implements OnInit {
 
   ]
 
+  driver: any = {
+    id: 1,
+    name: "John Doe",
+    email: "john.doe@gmail.com",
+    phone: "+203456987",
+    city: "LA",
+    address: "Apple srt. 43",
+  }
+
   deleteIconClass: string = 'fa fa-trash-o';
 
   constructor() {
