@@ -16,7 +16,15 @@ export class DataTableComponent implements OnInit {
     {key: 'address', text: 'Address'},
 
   ]
-  constructor() { }
+
+  deleteIconClass: string = 'fa fa-trash-o';
+
+  constructor() {
+
+    setInterval( () => {
+      this.deleteIconClass = this.deleteIconClass == 'fa fa-trash-o' ? 'fa fa-trash' : 'fa fa-trash-o';
+    },1000);
+   }
 
 
   ngOnInit(): void {

@@ -9,6 +9,7 @@ vs code
 
 One way data binding -> transfer from components to html
 Event binding -> from html to components
+Property binding -> attribute transfer to html
 
 # FleetManager
 
