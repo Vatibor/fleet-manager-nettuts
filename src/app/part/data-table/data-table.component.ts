@@ -18,7 +18,15 @@ export class DataTableComponent implements OnInit {
   ]
   constructor() { }
 
+
   ngOnInit(): void {
   }
 
+  onUpdate($event): void{
+    alert("Clicked on update.");
+  }
+
+  onDelete( $event): void{
+    alert(`Clicked on ${$event}.`);
+  }
 }

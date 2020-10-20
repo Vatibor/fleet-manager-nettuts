@@ -7,7 +7,8 @@ vs code
     - ctrl + d - multi select
     - ctrl + p - file list
 
-
+One way data binding -> transfer from components to html
+Event binding -> from html to components
 
 # FleetManager
 
