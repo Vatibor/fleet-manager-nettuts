@@ -1,3 +1,14 @@
+ 1. Bootstrap, fontawesome install -> npm i bootstrap font-awesome
+ 2. angular.json file style's part take the source route 
+ 
+ x. fontawesome tip: delete s character the html code if use logo
+
+vs code
+    - ctrl + d - multi select
+    - ctrl + p - file list
+
+
+
 # FleetManager
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
