@@ -13,6 +13,22 @@ export class BaseService {
         phone: "+203456987",
         city: "LA",
         address: "Apple srt. 43",
+      },
+      {
+        id: 2,
+        name: "Jack Idol",
+        email: "jack.idol@gmail.com",
+        phone: "+303456987",
+        city: "LA",
+        address: "Orange srt. 10",
+      },
+      {
+        id: 3,
+        name: "Charlie Filpo",
+        email: "charlie.filpo@gmail.com",
+        phone: "+703456987",
+        city: "NY",
+        address: "33th srt. 10",
       }
     ],
     vehicles: [
