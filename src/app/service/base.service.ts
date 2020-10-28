@@ -4,6 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class BaseService {
+  serverUrl: string =  "http://localhost:3000/";
+
   data = {
     drivers: [
       {
