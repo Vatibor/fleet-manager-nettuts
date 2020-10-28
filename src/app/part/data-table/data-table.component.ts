@@ -9,6 +9,9 @@ import { BaseService } from '../../service/base.service';
 export class DataTableComponent implements OnInit {
   @Input() list: any[];
   @Input() cols: any[];
+
+  phraseString: string = '';
+  phraseKey: string = 'notset';
   deleteIconClass: string = 'fa fa-trash-o';
 
   constructor(private baseService: BaseService) {

@@ -1,3 +1,24 @@
+<div class="row">
+    <div class="col-3">
+        <select [(ngModel)]="phraseKey" class="form-control" name="" id="">
+            <option value="notset">Find All</option>
+            <option *ngFor="let col of cols" [value]="col.key">{{ col.text }}</option>
+        </select>
+    </div>
+    <div class="col-9">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <i class="fa fa-filter"></i>
+                </span>
+            </div>
+            <input type="text" class="form-control" placeholder="filter" [(ngModel)]="phraseString">
+        </div>
+    </div>
+    
+</div>
+
+
 <table class="table table-striped">
     <thead>
         <tr>
@@ -11,11 +32,10 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let row of list">
+        <!-- objectArray pipeon átmegy a list, utána ngFor megjelenítés -->
+        <tr *ngFor="let row of list | objectArray:phraseString:phraseKey">
             <td *ngFor="let col of cols">
-                <app-data-cell 
-                [col]="col"
-                [cellValue]="row[col.key]"></app-data-cell>
+                <app-data-cell [col]="col" [cellValue]="row[col.key]"></app-data-cell>
             </td>
 
             <td class="btn-group">
